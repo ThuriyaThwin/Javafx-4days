@@ -1,0 +1,38 @@
+.round-btn {
+	-fx-pref-height: 200;
+	-fx-pref-width: 200;
+	-fx-background-radius: 350;
+	-fx-background-color: blue;
+	-fx-text-fill: white;
+	
+	-fx-font-size: 20;
+}
+
+.heading {
+	
+	-fx-padding: 20;
+	-fx-alignment: center;
+	
+	-fx-font-size: 40;
+	-fx-font-weight: bold;
+}
+
+.body-box {
+	-fx-padding: 40;	
+}
+
+.title {
+	-fx-font-size: 36;
+}
+
+.name {
+	-fx-font-size: 18;
+}
+
+.company {
+	-fx-font-size: 18;
+}
+
+.footer {
+	-fx-padding: 0 0.0 40 0;
+}

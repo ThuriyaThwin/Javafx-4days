@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="249.0" prefWidth="533.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day2.ep2.Sample1">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Action Event">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Text>
+      <Text fx:id="message" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="475.6829261779785" />
+      <TextField fx:id="textInput" />
+      <HBox spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#showMessage" text="ACTION METHOD" />
+            <Button fx:id="btn" mnemonicParsing="false" text="EVENT HANDLER" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

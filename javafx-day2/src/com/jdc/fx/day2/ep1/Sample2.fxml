@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.fx.day2.ep1.Sample2">
+   <children>
+      <HBox alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Controls Using Collection">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TabPane prefHeight="410.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Combo, Choice, List">
+               <content>
+                  <VBox spacing="20.0">
+                     <padding>
+                        <Insets left="40.0" right="40.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                           <children>
+                              <Label prefWidth="180.0" text="Combo Box" />
+                              <ComboBox fx:id="combo" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="30.0" spacing="20.0">
+                           <children>
+                              <Label prefWidth="180.0" text="Choice Box" />
+                              <ChoiceBox fx:id="choice" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="50.0" layoutY="76.0" spacing="20.0">
+                           <children>
+                              <Label prefWidth="180.0" text="List View" />
+                              <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="Table View">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" prefHeight="376.0" prefWidth="641.0">
+                          <columns>
+                            <TableColumn fx:id="colName" prefWidth="168.0" text="Course" />
+                            <TableColumn fx:id="colPrice" prefWidth="121.0" text="Fees" />
+                              <TableColumn fx:id="colDuration" prefWidth="108.0" text="Duration" />
+                              <TableColumn fx:id="colDescription" prefWidth="241.0" text="Description" />
+                          </columns>
+                        </TableView>
+                     </children></HBox>
+               </content>
+          </Tab>
+            <Tab text="Tree View">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TreeView fx:id="tree" prefHeight="376.0" prefWidth="298.0" />
+                     </children></HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER" prefHeight="453.0" prefWidth="660.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <HBox alignment="CENTER" prefHeight="154.0" prefWidth="660.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFX in 4 Days">
+               <font>
+                  <Font name="Marker Felt Thin" size="87.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="69.0" prefWidth="660.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zaw Min Lwin">
+               <font>
+                  <Font name="PT Serif Bold" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="288.0" prefHeight="45.0" prefWidth="660.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SOLT Engineering Co.,Ltd">
+               <font>
+                  <Font name="PT Serif" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>

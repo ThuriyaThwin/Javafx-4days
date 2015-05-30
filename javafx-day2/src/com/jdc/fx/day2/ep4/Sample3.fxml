@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.fx.day2.ep4.Sample3">
+   <children>
+      <Text layoutX="41.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Binding Sample">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" layoutX="89.0" layoutY="111.0" stroke="BLACK" strokeType="INSIDE" width="367.0" />
+      <Slider fx:id="sliderX" layoutX="89.0" layoutY="325.0" majorTickUnit="100.0" max="367.0" prefHeight="16.0" prefWidth="367.0" showTickLabels="true" showTickMarks="true" value="367.0" />
+      <Slider fx:id="sliderY" layoutX="54.0" layoutY="109.0" majorTickUnit="50.0" max="200.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" value="200.0" />
+   </children>
+</AnchorPane>

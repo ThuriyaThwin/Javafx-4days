@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox prefHeight="355.0" prefWidth="550.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day2.ep2.Sample2">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Event Sample 2">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <HBox>
+         <children>
+            <VBox spacing="20.0">
+               <children>
+                  <ChoiceBox fx:id="choice" prefHeight="26.0" prefWidth="251.0" />
+                  <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children>
+            </VBox>
+            <ImageView fx:id="img" fitHeight="206.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

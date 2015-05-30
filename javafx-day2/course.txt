@@ -1,0 +1,5 @@
+Java SE	75000	3	Basic Course of Java Programming Language
+JavaFX	100000	3	Course for GUI Application Development
+Java EE	200000	5	Course for Enterprise Application Development
+Spring Framework	200000	3	Course for Enterprise Application with Opensourse Framework
+Android	150000	3	Course for Android Application Development

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="37.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simple Calculator">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TextField layoutX="37.0" layoutY="118.0" />
+      <TextField layoutX="210.0" layoutY="118.0" />
+      <Button layoutX="393.0" layoutY="118.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="163.0" text="Calculate" />
+      <Label layoutX="38.0" layoutY="200.0" text="Plus" />
+      <Label layoutX="38.0" layoutY="235.0" text="Minus" />
+      <Label layoutX="37.0" layoutY="269.0" text="Multiply" />
+      <Label layoutX="38.0" layoutY="302.0" text="Divide" />
+      <TextField layoutX="210.0" layoutY="195.0" />
+      <TextField layoutX="210.0" layoutY="230.0" />
+      <TextField layoutX="210.0" layoutY="264.0" />
+      <TextField layoutX="210.0" layoutY="297.0" />
+      <Button layoutX="393.0" layoutY="297.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="163.0" text="Clear" />
+   </children>
+</AnchorPane>
