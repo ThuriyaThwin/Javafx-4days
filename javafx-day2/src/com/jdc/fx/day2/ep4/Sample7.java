@@ -42,7 +42,21 @@ public class Sample7 extends Application implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		exam = new Exam();
 		
-		exam.burmeseProperty().bind(getBinding(burmese));
+		exam.burmeseProperty().bind(new IntegerBinding() {
+			
+			{
+				bind(burmese.textProperty());
+			}
+			
+			@Override
+			protected int computeValue() {
+				try {
+					return Integer.parseInt(burmese.getText());
+				} catch (NumberFormatException e) {}
+				return 0;
+			}
+		});
+		
 		exam.englishProperty().bind(getBinding(english));
 		exam.mathsProperty().bind(getBinding(maths));
 		exam.physicsProperty().bind(getBinding(physics));

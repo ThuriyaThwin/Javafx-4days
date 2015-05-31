@@ -49,67 +49,67 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="1">
+            <Button mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="CE" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="CE" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="+" GridPane.columnIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="+" GridPane.columnIndex="3">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="2" GridPane.columnIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="2" GridPane.columnIndex="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="3" GridPane.columnIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="3" GridPane.columnIndex="2">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="4" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="7" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#doAction" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="80.0" style="-fx-background-radius: 40; -fx-background-color: black; -fx-text-fill: white;" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="24.0" />
                </font></Button>

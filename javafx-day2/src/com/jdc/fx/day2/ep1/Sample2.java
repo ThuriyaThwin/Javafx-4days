@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -76,8 +77,14 @@ public class Sample2 implements Initializable {
 		// table view
 		colName.setCellValueFactory(
 				new PropertyValueFactory<>("name"));
-		colPrice.setCellValueFactory(
-				new PropertyValueFactory<>("price"));
+		
+		colPrice.setCellValueFactory(a -> {
+			if(null != a) {
+				return new SimpleStringProperty(a.getValue().getPrice() + " MMK");
+			}
+			
+			return null;
+		});
 		colDuration.setCellValueFactory(
 				new PropertyValueFactory<>("duration"));
 		colDescription.setCellValueFactory(

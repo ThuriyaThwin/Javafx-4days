@@ -7,4 +7,7 @@ public interface ContactModel {
 	void add(Contact c);
 	List<Contact> getAll();
 
+	static ContactModel getModel() {
+		return ContactModelImp.getModel();
+	}
 }

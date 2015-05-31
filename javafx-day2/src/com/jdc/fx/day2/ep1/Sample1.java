@@ -175,15 +175,13 @@ public class Sample1 {
 		box.getChildren().addAll(label1, label2, label3);
 		
 		// label with graphic and text
-		Label iconText = new Label();
 		ImageView imgView = new ImageView(
 			new Image(getClass()
 				.getResourceAsStream("Web-b-icon.png")));
 		imgView.setPreserveRatio(true);
 		imgView.setFitWidth(30);
 		
-		iconText.setGraphic(imgView);
-		iconText.setText("Web Icon");
+		Label iconText = new Label("Web Icon", imgView);
 		iconText.setFont(Font.font(24));
 
 		box.getChildren().add(iconText);

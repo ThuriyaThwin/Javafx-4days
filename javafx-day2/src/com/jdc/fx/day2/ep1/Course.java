@@ -53,8 +53,4 @@ public class Course {
 		name = "Course of JDC";
 	}
 	
-	@Override
-	public String toString() {
-		return name;
-	}
 }

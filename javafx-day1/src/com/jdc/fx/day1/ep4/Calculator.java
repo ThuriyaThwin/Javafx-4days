@@ -1,13 +1,18 @@
 package com.jdc.fx.day1.ep4;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
-public class Calculator  {
+public class Calculator implements Initializable {
+	
 	@FXML
 	private Label resultDisplay;
 	@FXML
@@ -15,6 +20,7 @@ public class Calculator  {
 
 	@FXML
 	private GridPane grid;
+	
 
 	private boolean isNew = true;
 	
@@ -131,6 +137,14 @@ public class Calculator  {
 	private void clear() {
 		tmpDisplay.setText("");
 		resultDisplay.setText("0");
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		grid.getChildren().stream()
+			.filter(node -> node instanceof Button)
+			.map(node -> (Button)node)
+			.forEach(button -> button.setOnAction(Calculator.this::doAction));
 	}
 
 }
