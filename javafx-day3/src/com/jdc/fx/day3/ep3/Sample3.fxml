@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="626.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day3.ep3.Sample3">
+   <children>
+      <Text layoutX="39.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parallel Transition">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Line endX="580.0" layoutY="429.0" startX="50.0" />
+      <Circle fx:id="node" fill="DODGERBLUE" layoutX="361.0" layoutY="395.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
