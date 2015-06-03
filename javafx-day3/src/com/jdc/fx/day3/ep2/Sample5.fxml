@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="395.0" prefWidth="451.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day3.ep2.Sample5">
+   <children>
+      <Text layoutX="106.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reflection Effect">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="image" fitHeight="211.0" fitWidth="211.0" layoutX="124.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@duke.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
