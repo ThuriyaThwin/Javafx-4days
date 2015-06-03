@@ -7,9 +7,13 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ResourceBundle;
 
+
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
+import javafx.animation.PauseTransition;
+import javafx.animation.SequentialTransition;
 import javafx.animation.Timeline;
 import javafx.animation.Transition;
 import javafx.animation.TranslateTransition;
@@ -21,6 +25,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -31,12 +37,44 @@ public class Sample1 extends Application implements Initializable{
 	@FXML
 	private ImageView bird;
 	
+	@FXML
+	private VBox messageArea;
+	
+	@FXML
+	private Text title;
+	@FXML
+	private Text clickHere;
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		clickHere.setOnMouseClicked(a -> {
+			// disaper click here
+			FadeTransition clickAnimation = new FadeTransition(Duration.millis(500), clickHere);
+			clickAnimation.toValueProperty().set(0.0);
+			
+			// appear title
+			Timeline timeLine = getAnimatedString(title, "Flying Bird");
+			
+			// parallel animation
+			ParallelTransition titleAnimation = new ParallelTransition(clickAnimation, timeLine);
+			titleAnimation.setOnFinished(b -> {
+				// play story
+				playStory();
+			});
+			
+			titleAnimation.play();
+			
+		});
+
+	}
+	
+	
+	private void playStory() {
 		try {
 			// flying
 			Timeline fly = this.getFlying();
@@ -49,6 +87,24 @@ public class Sample1 extends Application implements Initializable{
 			animation.setCycleCount(Timeline.INDEFINITE);
 			animation.setAutoReverse(true);
 			animation.play();
+			
+			// Java Developer Class
+			Text jdc = new Text();
+			Text address = new Text();
+			Text phone = new Text();
+			messageArea.getChildren().addAll(jdc, address, phone);
+			
+			SequentialTransition textAnimation = new SequentialTransition(
+					new PauseTransition(Duration.seconds(2)), 
+					this.getAnimatedString(jdc, "Java Developer Class"),
+					new PauseTransition(Duration.seconds(2)), 
+					this.getAnimatedString(address, "19/20F West Side of Aung San Stadium, Mingalar Taungnyunt"),
+					new PauseTransition(Duration.seconds(2)), 
+					this.getAnimatedString(phone, "01-394-809, 01-394-820 ")
+					);
+			
+			textAnimation.play();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -93,7 +149,26 @@ public class Sample1 extends Application implements Initializable{
 
 		// show stage
 		primaryStage.show();
-
+	}
+	
+	private Timeline getAnimatedString(Text text, String message) {
+		// setting style text
+		text.setStyle("-fx-font-size:24; -fx-fill:white;"); 
+		
+		// creating time line
+		Timeline timeLine = new Timeline();
+		StringBuffer sb = new StringBuffer();
+		String [] array = message.split("");
+		int time = 500;
+		
+		for(String s : array) {
+			time += 150;
+			sb.append(s);
+			KeyFrame frame = new KeyFrame(Duration.millis(time), new KeyValue(text.textProperty(), sb.toString()));
+			timeLine.getKeyFrames().add(frame);
+		}
+		
+		return timeLine;
 	}
 
 }
