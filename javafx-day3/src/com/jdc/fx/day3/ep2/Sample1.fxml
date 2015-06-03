@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="378.0" prefWidth="521.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day3.ep2.Sample1">
+   <children>
+      <Text layoutX="42.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blend Effect">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Text>
+      <Group layoutX="127.0" layoutY="186.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="98.0" stroke="BLACK" strokeType="INSIDE" width="97.0" />
+            <Circle fx:id="circle" fill="#ff1f1f" radius="56.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Group>
+      <ListView fx:id="blends" layoutX="307.0" layoutY="33.0" prefHeight="313.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

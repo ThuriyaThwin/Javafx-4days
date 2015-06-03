@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="410.0" prefWidth="579.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.jdc.fx.day3.ep2.Sample3">
+   <children>
+      <Text layoutX="149.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blur Effect">
+         <font>
+            <Font size="56.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Text>
+      <TabPane layoutX="27.0" layoutY="96.0" prefHeight="297.0" prefWidth="525.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Box Blur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Polygon fx:id="boxBlur" fill="DODGERBLUE" layoutX="96.0" layoutY="142.0" scaleX="1.5" scaleY="1.5" stroke="BLACK" strokeType="INSIDE">
+                          <points>
+                            <Double fx:value="-50.0" />
+                            <Double fx:value="40.0" />
+                            <Double fx:value="50.0" />
+                            <Double fx:value="40.0" />
+                            <Double fx:value="0.0" />
+                            <Double fx:value="-60.0" />
+                          </points>
+                        </Polygon>
+                        <GridPane layoutX="214.0" layoutY="44.0" prefHeight="177.0" prefWidth="278.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="60.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="218.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Width" />
+                              <Label text="height" GridPane.rowIndex="1" />
+                              <Label text="Iteration" GridPane.rowIndex="2" />
+                              <Slider fx:id="boxWidth" majorTickUnit="50.0" max="255.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                              <Slider fx:id="boxHeight" majorTickUnit="50.0" max="255.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Slider fx:id="boxIteration" blockIncrement="1.0" majorTickUnit="1.0" max="3.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Motion Blur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Circle fx:id="motionBlur" fill="DODGERBLUE" layoutX="117.0" layoutY="132.0" radius="65.0" stroke="BLACK" strokeType="INSIDE" />
+                        <GridPane layoutX="222.0" layoutY="75.0" prefHeight="114.0" prefWidth="266.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="70.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="196.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Angle" />
+                              <Label text="Radius" GridPane.rowIndex="1" />
+                              <Slider fx:id="motionAngle" blockIncrement="30.0" majorTickUnit="90.0" max="360.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                              <Slider fx:id="motionRadius" majorTickUnit="20.0" max="63.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Gaussian Blur">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle fx:id="gaussian" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="139.0" layoutX="42.0" layoutY="55.0" stroke="BLACK" strokeType="INSIDE" width="135.0" />
+                        <GridPane layoutX="199.0" layoutY="55.0" prefHeight="143.0" prefWidth="305.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="53.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="252.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Radius" />
+                              <Slider fx:id="radius" blockIncrement="90.0" majorTickUnit="90.0" max="360.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

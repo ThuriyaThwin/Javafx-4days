@@ -111,7 +111,7 @@ public class Sample1 extends Application implements Initializable{
 	}
 	
 	private Transition getMoving() {
-		TranslateTransition move = new TranslateTransition(Duration.millis(3000), bird);
+		TranslateTransition move = new TranslateTransition(Duration.millis(5000), bird);
 		move.fromXProperty().set(800);
 		move.toXProperty().set(-350);
 		move.setCycleCount(Timeline.INDEFINITE);
@@ -128,7 +128,7 @@ public class Sample1 extends Application implements Initializable{
 		
 		Timeline flying = new Timeline(frame1, frame2, frame3);
 		
-		flying.setRate(0.7);
+		flying.setRate(0.5);
 		flying.setAutoReverse(true);
 		flying.setCycleCount(Timeline.INDEFINITE);
 		

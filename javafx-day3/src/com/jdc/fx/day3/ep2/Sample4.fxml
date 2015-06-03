@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="434.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.fx.day3.ep2.Sample4">
+   <children>
+      <Text layoutX="176.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shadow Effects">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="35.0" layoutY="91.0" prefHeight="321.0" prefWidth="553.0">
+        <panes>
+          <TitledPane text="Drop Shadow">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="dropText" layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drop Shadow">
+                           <font>
+                              <Font name="Chalkboard Bold" size="34.0" />
+                           </font>
+                        </Text>
+                        <Circle fx:id="circle" fill="DODGERBLUE" layoutX="119.0" layoutY="162.0" radius="59.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox layoutX="266.0" layoutY="34.0" prefHeight="214.0" prefWidth="265.0" spacing="20.0">
+                           <children>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Offset X" />
+                                    <Slider fx:id="dOffsetX" blockIncrement="1.0" majorTickUnit="10.0" max="50.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Offset Y" />
+                                    <Slider fx:id="dOffsetY" blockIncrement="1.0" majorTickUnit="10.0" max="50.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Shadow Color" />
+                                    <ColorPicker fx:id="colorPicker" prefHeight="26.0" prefWidth="260.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane expanded="false" text="Inner Shadow">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="innerText" fill="#0f42e8" layoutX="33.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inner Shadow">
+                           <font>
+                              <Font name="Arial Black" size="36.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="137.0" layoutX="95.0" layoutY="99.0" stroke="BLACK" strokeType="INSIDE" width="146.0" />
+                        <Slider fx:id="iOffxetX" layoutX="369.0" layoutY="48.0" majorTickUnit="10.0" max="50.0" minorTickCount="4" orientation="VERTICAL" prefHeight="200.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" />
+                        <Label layoutX="316.0" layoutY="197.0" rotate="270.0" text="Offset X" />
+                        <Slider fx:id="iOffsetY" layoutX="446.0" layoutY="48.0" majorTickUnit="10.0" max="50.0" minorTickCount="4" orientation="VERTICAL" prefHeight="200.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" />
+                        <Label layoutX="393.0" layoutY="197.0" rotate="270.0" text="Offset Y" />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </children>
+</AnchorPane>
