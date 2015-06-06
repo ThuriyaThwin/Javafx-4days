@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="app-frame" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox styleClass="heading">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="head-title" text="Login Form" />
+         </children>
+      </HBox>
+      <VBox styleClass="main-body">
+         <children>
+            <VBox styleClass="form-group">
+               <children>
+                  <Label text="Label" />
+                  <TextField />
+               </children>
+            </VBox>
+            <VBox layoutX="50.0" layoutY="30.0" styleClass="form-group">
+               <children>
+                  <Label text="Password" />
+                  <PasswordField />
+               </children>
+            </VBox>
+            <HBox styleClass="form-group">
+               <children>
+                  <Button mnemonicParsing="false" text="CLEAR" />
+                  <Button mnemonicParsing="false" text="LOGIN" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

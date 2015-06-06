@@ -25,12 +25,16 @@ public class Sample2 extends Application implements Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+
+		Bloom b = new Bloom(1.0);
+		text.setEffect(b);
+		b.thresholdProperty().bind(slide.valueProperty());
 		
-		slide.valueProperty().addListener((a, b, c) -> {
-			Bloom bloom = new Bloom();
-			bloom.setThreshold(c.doubleValue());
-			text.setEffect(bloom);
-		});
+//		slide.valueProperty().addListener((a, b, c) -> {
+//			Bloom bloom = new Bloom();
+//			bloom.setThreshold(c.doubleValue());
+//			text.setEffect(bloom);
+//		});
 	}
 
 	@Override

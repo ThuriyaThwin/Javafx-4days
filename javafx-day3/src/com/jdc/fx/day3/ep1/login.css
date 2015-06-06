@@ -1,0 +1,25 @@
+.app-frame {
+	-fx-pref-width: 480px;
+	-fx-background-color: silver;
+}
+
+.heading {
+	-fx-pref-height: 73px;
+	-fx-alignment: center-left;
+	-fx-padding: 0 0 0 20;
+	-fx-background-color: brown;
+}
+
+.head-title {
+	-fx-fill: white;
+	-fx-font-size: 30;
+}
+
+.main-body {
+	-fx-spacing: 20;
+	-fx-padding: 20 40 40 40;
+}
+
+.form-group {
+	-fx-spacing: 10;	
+}

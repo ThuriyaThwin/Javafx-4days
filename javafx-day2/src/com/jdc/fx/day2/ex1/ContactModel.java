@@ -8,6 +8,6 @@ public interface ContactModel {
 	List<Contact> getAll();
 
 	static ContactModel getModel() {
-		return ContactModelImp.getModel();
+		return ContactModelFile.getModel();
 	}
 }

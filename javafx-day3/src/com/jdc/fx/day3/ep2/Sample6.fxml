@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="464.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.fx.day3.ep2.Sample6">
+   <children>
+      <Group fx:id="text" layoutX="48.0" layoutY="24.0">
+         <children>
+            <Circle fill="#ff1f1f" layoutX="253.0" layoutY="172.0" radius="149.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text fill="#48ab48" layoutX="130.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lighting">
+               <font>
+                  <Font name="Bradley Hand Bold" size="61.0" />
+               </font>
+            </Text>
+         </children>
+      </Group>
+      <Slider fx:id="slider" blockIncrement="1.0" layoutX="115.0" layoutY="380.0" majorTickUnit="2.0" max="10.0" minorTickCount="1" prefHeight="16.0" prefWidth="389.0" showTickLabels="true" showTickMarks="true" />
+   </children>
+</AnchorPane>

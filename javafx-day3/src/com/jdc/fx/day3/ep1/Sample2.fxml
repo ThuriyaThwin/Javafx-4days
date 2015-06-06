@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="480.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="73.0" style="-fx-background-color: brown;">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Form">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <VBox spacing="20.0">
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Login ID" />
+                  <TextField />
+               </children>
+            </VBox>
+            <VBox layoutX="50.0" layoutY="30.0" spacing="10.0">
+               <children>
+                  <Label text="Password" />
+                  <PasswordField />
+               </children>
+            </VBox>
+            <HBox spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" text="CLEAR" />
+                  <Button mnemonicParsing="false" text="LOGIN" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
