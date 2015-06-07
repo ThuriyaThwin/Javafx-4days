@@ -3,6 +3,8 @@ package com.jdc.fx.day2.ex1;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.jdc.contact.Contact;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -26,7 +28,7 @@ public class ContactList implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		colName.setCellValueFactory(new PropertyValueFactory<>("name"));
 		colMobile.setCellValueFactory(new PropertyValueFactory<>("mobile"));
-		colHome.setCellValueFactory(new PropertyValueFactory<>("home"));
+		colHome.setCellValueFactory(new PropertyValueFactory<>("phone"));
 		
 		contacts.getItems().addAll(ContactModel.getModel().getAll());
 	}

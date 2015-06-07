@@ -2,6 +2,8 @@ package com.jdc.fx.day2.ex1;
 
 import java.io.IOException;
 
+import com.jdc.contact.Contact;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -75,9 +77,8 @@ public class ContactForm {
 		Contact c = new Contact();
 		c.setName(name.getText());
 		c.setAddress(address.getText());
-		c.setHome(home.getText());
+		c.setPhone(home.getText());
 		c.setMobile(mobile.getText());
-		c.setOffice(office.getText());
 		return c;
 	}
 
