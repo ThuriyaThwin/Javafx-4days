@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.duke.DukeAnimation">
+   <children>
+      <Group fx:id="duke" layoutX="168.0" layoutY="210.0">
+         <children>
+            <Circle fx:id="nose" centerY="180.0" fill="#ff1f1f" layoutX="250.0" radius="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+            <Path fx:id="leftBody" fill="#fdffff" layoutX="40.0" layoutY="200.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+               <elements>
+                  <MoveTo />
+                  <ArcTo radiusX="40.0" radiusY="10.0" sweepFlag="true" x="200.0" />
+                  <QuadCurveTo controlX="300.0" controlY="300.0" y="150.0" />
+                  <ClosePath />
+               </elements>
+            </Path>
+            <Path fx:id="rightBody" fill="#fdffff" layoutX="50.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+                <elements>
+                    <MoveTo x="30.0" />
+                    <ArcTo radiusX="40.0" radiusY="10.0" sweepFlag="true" x="230.0" />
+                    <QuadCurveTo controlX="400.0" controlY="350.0" x="80.0" y="200.0" />
+                  <QuadCurveTo controlY="150.0" x="30.0" />
+                    <ClosePath />
+                </elements>
+            </Path>
+            <Path fx:id="head" fill="#0a0a0a" layoutX="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0">
+                <elements>
+                    <MoveTo x="100.0" />
+                    <QuadCurveTo controlX="210.0" controlY="200.0" x="200.0" y="200.0" />
+                  <ArcTo radiusX="50.0" radiusY="10.0" y="210.0" />
+                  <QuadCurveTo controlY="150.0" x="100.0" />
+                    <ClosePath />
+                </elements>
+            </Path>
+            <Circle fx:id="tail" fill="#0a0a0a" layoutX="80.0" layoutY="300.0" radius="41.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
