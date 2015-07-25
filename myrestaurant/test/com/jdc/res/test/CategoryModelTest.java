@@ -1,6 +1,7 @@
 package com.jdc.res.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 
@@ -8,13 +9,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jdc.restaurant.entity.Category;
-import com.jdc.restaurant.model.CategoryModel;
+import com.jdc.restaurant.model.Category;
 import com.jdc.restaurant.model.ConnectionManager;
+import com.jdc.restaurant.model.Model;
+import com.jdc.restaurant.model.BaseModel.Param;
 
 public class CategoryModelTest {
 	
-	private CategoryModel model;
+	private Model<Category> model;
 	
 	@BeforeClass
 	public static void initTable() {
@@ -23,7 +25,7 @@ public class CategoryModelTest {
 	
 	@Before
 	public void init() {
-		model = new CategoryModel();
+		model = Category.getModel();
 	}
 
 	@Test
@@ -39,7 +41,7 @@ public class CategoryModelTest {
 	
 	@Test
 	public void test2() {
-		Category cat = model.find(1);
+		Category cat = model.find(Param.param("id", 1));
 		
 		assertNotNull(cat);
 		

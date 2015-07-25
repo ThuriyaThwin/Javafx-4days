@@ -2,8 +2,8 @@ package com.jdc.restaurant.service;
 
 import java.util.List;
 
-import com.jdc.restaurant.entity.Category;
-import com.jdc.restaurant.entity.MenuItem;
+import com.jdc.restaurant.model.Category;
+import com.jdc.restaurant.model.MenuItem;
 import com.jdc.restaurant.model.MenuItemModel;
 
 public class MenuItemService {
@@ -11,7 +11,7 @@ public class MenuItemService {
 	private MenuItemModel model;
 	
 	public MenuItemService() {
-		model = new MenuItemModel();
+		model = MenuItemModel.getModel();
 	}
 	
 	public List<MenuItem> getMenu(Category cat) {

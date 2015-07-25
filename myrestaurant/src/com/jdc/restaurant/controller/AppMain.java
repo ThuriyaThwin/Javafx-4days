@@ -11,7 +11,7 @@ public class AppMain extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// get fxml name
-		String fxml = String.format("%s.fxml", RestaurantHome.class.getSimpleName());
+		String fxml = String.format("%s.fxml", OrderController.class.getSimpleName());
 
 		// load fxml
 		Parent p = FXMLLoader.load(getClass().getResource(fxml));

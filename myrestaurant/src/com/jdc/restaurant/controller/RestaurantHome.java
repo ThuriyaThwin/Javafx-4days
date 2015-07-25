@@ -3,8 +3,8 @@ package com.jdc.restaurant.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.jdc.restaurant.entity.OrderDetails;
-import com.jdc.restaurant.entity.Table;
+import com.jdc.restaurant.model.OrderDetails;
+import com.jdc.restaurant.model.Table;
 import com.jdc.restaurant.service.TableService;
 
 import javafx.fxml.FXML;

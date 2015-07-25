@@ -2,15 +2,15 @@ package com.jdc.restaurant.service;
 
 import java.util.List;
 
-import com.jdc.restaurant.entity.Category;
-import com.jdc.restaurant.model.CategoryModel;
+import com.jdc.restaurant.model.Category;
+import com.jdc.restaurant.model.Model;
 
 public class CategoryService {
 	
-	private CategoryModel model;
+	private Model<Category> model;
 	
 	public CategoryService() {
-		model = new CategoryModel();
+		model = Category.getModel();
 	}
 	
 	public List<Category> getAllCategory() {

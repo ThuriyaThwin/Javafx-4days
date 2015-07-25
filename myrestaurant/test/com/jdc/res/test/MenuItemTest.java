@@ -1,6 +1,7 @@
 package com.jdc.res.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,11 +10,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jdc.restaurant.entity.Category;
-import com.jdc.restaurant.entity.MenuItem;
-import com.jdc.restaurant.model.CategoryModel;
+import com.jdc.restaurant.model.BaseModel.Param;
+import com.jdc.restaurant.model.Category;
 import com.jdc.restaurant.model.ConnectionManager;
+import com.jdc.restaurant.model.MenuItem;
 import com.jdc.restaurant.model.MenuItemModel;
+import com.jdc.restaurant.model.Model;
 
 public class MenuItemTest {
 	
@@ -23,7 +25,7 @@ public class MenuItemTest {
 	public static void setUpBeforeClass() throws Exception {
 		ConnectionManager.truncate("order_details", "menu_item", "category");
 		
-		CategoryModel catModel = new CategoryModel();
+		Model<Category> catModel = Category.getModel();
 		
 		List<Category> list = Arrays.asList(
 				new Category("Hot Drinks"),
@@ -39,7 +41,7 @@ public class MenuItemTest {
 
 	@Before
 	public void setUp() throws Exception {
-		model = new MenuItemModel();
+		model = MenuItemModel.getModel();
 	}
 
 	@Test
@@ -53,7 +55,7 @@ public class MenuItemTest {
 	
 	@Test
 	public void test2() {
-		MenuItem item = model.find(1);
+		MenuItem item = model.find(Param.param("id", 1));
 		assertNotNull(item);
 		assertEquals("Coffee", item.getMenu());
 		assertEquals(350, item.getPrice());
@@ -82,7 +84,7 @@ public class MenuItemTest {
 
 	@Test
 	public void test4() {
-		Category cat = new CategoryModel().find(1);
+		Category cat = Category.getModel().find(Param.param("id", 1));
 		
 		List<MenuItem> list = model.findByCategory(cat);
 		

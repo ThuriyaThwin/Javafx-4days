@@ -1,7 +1,7 @@
 package com.jdc.restaurant.service;
 
-import com.jdc.restaurant.entity.Bill;
-import com.jdc.restaurant.entity.Table;
+import com.jdc.restaurant.model.Bill;
+import com.jdc.restaurant.model.Table;
 
 public class BillServices {
 	
@@ -11,6 +11,9 @@ public class BillServices {
 	}
 	
 	public int checkOut(Bill bill) {
+		
+		
+		
 		return 0;
 	}
 

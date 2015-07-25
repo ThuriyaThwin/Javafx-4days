@@ -18,9 +18,9 @@ import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 
-import com.jdc.restaurant.entity.Category;
-import com.jdc.restaurant.entity.MenuItem;
-import com.jdc.restaurant.entity.OrderDetails;
+import com.jdc.restaurant.model.Category;
+import com.jdc.restaurant.model.MenuItem;
+import com.jdc.restaurant.model.OrderDetails;
 import com.jdc.restaurant.service.CategoryService;
 import com.jdc.restaurant.service.MenuItemService;
 

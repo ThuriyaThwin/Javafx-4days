@@ -1,9 +1,17 @@
-package com.jdc.restaurant.entity;
+package com.jdc.restaurant.model;
 
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Bill {
+import com.jdc.restaurant.model.BaseModel.Param;
+
+
+public class Bill implements Entity{
 	
 	public enum Status {
 		
@@ -35,10 +43,6 @@ public class Bill {
 	private Status status;
 	private LocalDateTime creation;
 	private LocalDateTime modification;
-	
-	public String getInsertSql() {
-		return "insert into bill (business_date, rtable_id, status, creation, modification) values (?, ?, ?, ?, ?)";
-	}
 	
 	public Bill(Table table) {
 		super();
@@ -98,5 +102,43 @@ public class Bill {
 
 	public void setModification(LocalDateTime modification) {
 		this.modification = modification;
+	}
+
+	@Override
+	public String insertSql() {
+		return "insert into bill (business_date, rtable_id, status, creation, modification) values (?, ?, ?, ?, ?)";
+	}
+
+	@Override
+	public void setParam(PreparedStatement stmt) throws SQLException {
+		stmt.setDate(1, Date.valueOf(bDate));
+		stmt.setInt(2, table.getId());
+		stmt.setInt(3, status.value());
+		stmt.setTimestamp(4, Timestamp.valueOf(creation));
+		stmt.setTimestamp(5, Timestamp.valueOf(modification));
+	}
+	
+	public static Bill map(ResultSet rs) {
+		
+		try {
+			Bill bill = new Bill();
+			
+			bill.setId(rs.getInt(1));
+			bill.setbDate(rs.getDate(2).toLocalDate());
+			bill.setTable(Table.getModel().find(Param.param("id", rs.getInt(3))));
+			bill.setStatus(Status.getStatus(rs.getInt(4)));
+			bill.setCreation(rs.getTimestamp(5).toLocalDateTime());
+			bill.setModification(rs.getTimestamp(6).toLocalDateTime());
+					
+			return bill;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	public static Model<Bill> getModel() {
+		return BaseModel.getModel("bill", Bill::map);
 	}
 }

@@ -1,6 +1,7 @@
 package com.jdc.res.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
 import java.util.stream.IntStream;
@@ -9,13 +10,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.jdc.restaurant.entity.Table;
 import com.jdc.restaurant.model.ConnectionManager;
-import com.jdc.restaurant.model.TableModel;
+import com.jdc.restaurant.model.Model;
+import com.jdc.restaurant.model.Table;
+import com.jdc.restaurant.model.BaseModel.Param;
 
 public class TableTest {
 	
-	private TableModel model;
+	private Model<Table> model;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -24,7 +26,7 @@ public class TableTest {
 
 	@Before
 	public void setUp() throws Exception {
-		model = new TableModel();
+		model = Table.getModel();
 	}
 
 	@Test
@@ -36,7 +38,7 @@ public class TableTest {
 	
 	@Test
 	public void test2() {
-		Table t = model.find(1);
+		Table t = model.find(Param.param("id", 1));
 		assertNotNull(t);
 		assertEquals("Table No 1", t.getTableNumber());
 	}

@@ -3,16 +3,16 @@ package com.jdc.restaurant.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jdc.restaurant.entity.OrderDetails;
-import com.jdc.restaurant.entity.Table;
-import com.jdc.restaurant.model.TableModel;
+import com.jdc.restaurant.model.Model;
+import com.jdc.restaurant.model.OrderDetails;
+import com.jdc.restaurant.model.Table;
 
 public class TableService {
 	
-	private TableModel model;
+	private Model<Table> model;
 	
 	public TableService() {
-		model = new TableModel();
+		model = Table.getModel();
 	}
 	
 	public List<Table> getAllTable() {
