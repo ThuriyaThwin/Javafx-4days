@@ -18,7 +18,7 @@ public class CategoryModelTest {
 	
 	@BeforeClass
 	public static void initTable() {
-		ConnectionManager.truncate("menu_item", "category", "rtable");
+		ConnectionManager.truncate("order_details", "menu_item", "category");
 	}
 	
 	@Before

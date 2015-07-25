@@ -12,6 +12,7 @@ public class ConnectionManager {
 	private static String pass = "restuser";
 	
 	public static Connection getConnection() throws SQLException {
+		
 		return DriverManager.getConnection(url, user, pass);
 	}
 	

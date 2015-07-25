@@ -21,7 +21,7 @@ public class MenuItemTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		ConnectionManager.truncate("menu_item", "category", "rtable");
+		ConnectionManager.truncate("order_details", "menu_item", "category");
 		
 		CategoryModel catModel = new CategoryModel();
 		

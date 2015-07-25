@@ -2,15 +2,20 @@ package com.jdc.restaurant.entity;
 
 public class OrderDetails {
 	
-	private int menuId;
 	private int count;
 	private MenuItem menu;
+	private Order order;
 	
-	public int getMenuId() {
-		return menuId;
+	public String getInsertSql() {
+		return "insert into order_details (menu_item_id, order_id, count) values (?, ?, ?)";
 	}
-	public void setMenuId(int menuId) {
-		this.menuId = menuId;
+	
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+		
 	}
 	public int getCount() {
 		return count;
@@ -24,11 +29,11 @@ public class OrderDetails {
 	public void setMenu(MenuItem menu) {
 		this.menu = menu;
 	}
+	
 	public OrderDetails(int count, MenuItem menu) {
 		super();
 		this.count = count;
 		this.menu = menu;
-		this.menuId = menu.getId();
 	}
 
 }
