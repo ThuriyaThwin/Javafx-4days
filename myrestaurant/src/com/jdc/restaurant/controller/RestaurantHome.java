@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import com.jdc.restaurant.entity.OrderDetails;
 import com.jdc.restaurant.entity.Table;
+import com.jdc.restaurant.service.TableService;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,6 +14,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class RestaurantHome implements Initializable{
+	
+	private TableService service;
 	
 	@FXML
 	private ListView<Table> list;
@@ -29,8 +32,9 @@ public class RestaurantHome implements Initializable{
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+
+		service = new TableService();
+		list.getItems().addAll(service.getAllTable());
 	}
 	
 }
