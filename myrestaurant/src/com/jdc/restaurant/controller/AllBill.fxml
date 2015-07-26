@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="680.0" prefWidth="980.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Text layoutX="36.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bill List">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="36.0" layoutY="87.0" prefHeight="26.0" prefWidth="160.0" promptText="From" />
+      <DatePicker layoutX="204.0" layoutY="87.0" prefHeight="26.0" prefWidth="160.0" promptText="To" />
+      <ComboBox layoutX="376.0" layoutY="87.0" prefHeight="26.0" prefWidth="125.0" />
+      <TableView layoutX="36.0" layoutY="140.0" prefHeight="509.0" prefWidth="468.0">
+        <columns>
+          <TableColumn prefWidth="103.0" text="Table" />
+          <TableColumn prefWidth="181.0" text="Date Time" />
+            <TableColumn prefWidth="74.0" text="Status" />
+            <TableColumn prefWidth="106.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView layoutX="527.0" layoutY="140.0" prefHeight="357.0" prefWidth="414.0">
+        <columns>
+          <TableColumn prefWidth="196.0" text="Menu" />
+          <TableColumn prefWidth="70.0" text="Count" />
+            <TableColumn prefWidth="146.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

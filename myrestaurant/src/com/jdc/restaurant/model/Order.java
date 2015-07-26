@@ -45,7 +45,7 @@ public class Order implements Entity{
 
 	@Override
 	public String insertSql() {
-		return "insert into order (bill_id, od_time) values (?, ?)";
+		return "insert into `order` (bill_id, od_time) values (?, ?)";
 	}
 
 	@Override

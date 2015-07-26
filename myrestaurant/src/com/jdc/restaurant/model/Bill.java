@@ -41,6 +41,9 @@ public class Bill implements Entity{
 	private LocalDate bDate;
 	private Table table;
 	private Status status;
+	private int subTotal;
+	private double tax;
+	private double total;
 	private LocalDateTime creation;
 	private LocalDateTime modification;
 	
@@ -60,6 +63,30 @@ public class Bill implements Entity{
 		modification = LocalDateTime.now();
 	}
 	
+	public int getSubTotal() {
+		return subTotal;
+	}
+
+	public void setSubTotal(int subTotal) {
+		this.subTotal = subTotal;
+	}
+
+	public double getTax() {
+		return tax;
+	}
+
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -127,8 +154,11 @@ public class Bill implements Entity{
 			bill.setbDate(rs.getDate(2).toLocalDate());
 			bill.setTable(Table.getModel().find(Param.param("id", rs.getInt(3))));
 			bill.setStatus(Status.getStatus(rs.getInt(4)));
-			bill.setCreation(rs.getTimestamp(5).toLocalDateTime());
-			bill.setModification(rs.getTimestamp(6).toLocalDateTime());
+			bill.setSubTotal(rs.getInt(5));
+			bill.setTax(rs.getDouble(6));
+			bill.setTotal(rs.getDouble(7));
+			bill.setCreation(rs.getTimestamp(8).toLocalDateTime());
+			bill.setModification(rs.getTimestamp(9).toLocalDateTime());
 					
 			return bill;
 		} catch (SQLException e) {

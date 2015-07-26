@@ -10,4 +10,5 @@ public interface Model<T extends Entity> {
 	List<T> getAll();
 	void update(String set, String where, List<Object> param);
 	void delete(Param param);
+	List<T> getWhere(String where, List<Object> param);
 }

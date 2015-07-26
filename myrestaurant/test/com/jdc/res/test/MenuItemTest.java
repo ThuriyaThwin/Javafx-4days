@@ -14,12 +14,11 @@ import com.jdc.restaurant.model.BaseModel.Param;
 import com.jdc.restaurant.model.Category;
 import com.jdc.restaurant.model.ConnectionManager;
 import com.jdc.restaurant.model.MenuItem;
-import com.jdc.restaurant.model.MenuItemModel;
 import com.jdc.restaurant.model.Model;
 
 public class MenuItemTest {
 	
-	private MenuItemModel model;
+	private Model<MenuItem> model;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -41,7 +40,7 @@ public class MenuItemTest {
 
 	@Before
 	public void setUp() throws Exception {
-		model = MenuItemModel.getModel();
+		model = MenuItem.getModel();
 	}
 
 	@Test
@@ -86,9 +85,17 @@ public class MenuItemTest {
 	public void test4() {
 		Category cat = Category.getModel().find(Param.param("id", 1));
 		
-		List<MenuItem> list = model.findByCategory(cat);
+		List<MenuItem> list = model.getWhere("category_id = ?", Arrays.asList(cat.getId()));
 		
 		assertEquals(2, list.size());
+	}
+	
+	@Test
+	public void test5() {
+		List<MenuItem> list = model.getWhere("menu = ?", Arrays.asList("Tea"));
+		assertNotNull(list);
+		
+		assertEquals(1, list.size());
 	}
 
 }

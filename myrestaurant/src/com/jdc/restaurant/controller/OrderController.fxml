@@ -21,10 +21,10 @@
         </columns>
       </TableView>
       <Label layoutX="468.0" layoutY="334.0" text="Total" />
-      <TextField alignment="CENTER_RIGHT" editable="false" layoutX="524.0" layoutY="329.0" prefHeight="26.0" prefWidth="143.0" />
+      <TextField fx:id="totalPrice" alignment="CENTER_RIGHT" editable="false" layoutX="524.0" layoutY="329.0" prefHeight="26.0" prefWidth="143.0" />
       <Text layoutX="29.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Table No" />
       <TextField fx:id="tableNumber" editable="false" layoutX="99.0" layoutY="20.0" prefHeight="26.0" prefWidth="129.0" />
-      <Button layoutX="578.0" layoutY="375.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Do Order" />
-      <Button layoutX="477.0" layoutY="375.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Clear" />
+      <Button layoutX="578.0" layoutY="375.0" mnemonicParsing="false" onAction="#doOrder" prefHeight="26.0" prefWidth="89.0" text="Do Order" />
+      <Button layoutX="477.0" layoutY="375.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="89.0" text="Clear" />
    </children>
 </AnchorPane>

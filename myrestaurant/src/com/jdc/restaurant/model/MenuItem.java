@@ -87,7 +87,7 @@ public class MenuItem implements Entity{
 	}
 	
 	public static Model<MenuItem> getModel() {
-		return MenuItemModel.getModel();
+		return BaseModel.getModel("menu_item", MenuItem::map);
 	}
 
 }

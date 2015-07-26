@@ -42,7 +42,7 @@ public class BaseModel<T extends Entity> implements Model<T> {
 
 	@Override
 	public T find(Param param) {
-		String sql = String.format("select * from %s where " + param.where(), tableName);
+		String sql = String.format("%s where %s", getSelectSql(), param.where());
 		try(Connection conn = ConnectionManager.getConnection();
 				Statement stmt = conn.createStatement()) {
 			
@@ -60,7 +60,7 @@ public class BaseModel<T extends Entity> implements Model<T> {
 	@Override
 	public List<T> getAll() {
 		List<T> list = new ArrayList<>();
- 		String sql = String.format("select * from %s", tableName);
+ 		String sql = this.getSelectSql();
 		try(Connection conn = ConnectionManager.getConnection();
 				Statement stmt = conn.createStatement()) {
 			
@@ -75,10 +75,25 @@ public class BaseModel<T extends Entity> implements Model<T> {
 		return list;
 	}
 
+	private String getSelectSql() {
+		return String.format("select * from %s", tableName);
+	}
+
 	@Override
 	public void update(String set, String where, List<Object> param) {
-		// TODO Auto-generated method stub
+		String sql = String.format("update %s set %s where %s", tableName, set, where);
 		
+		try(Connection conn = ConnectionManager.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(sql)) {
+			for(int i = 0; i < param.size(); i++) {
+				stmt.setObject(i + 1, param.get(i));
+			}
+			
+			stmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -127,6 +142,33 @@ public class BaseModel<T extends Entity> implements Model<T> {
 			}
 			return String.valueOf(value) + " ";
 		}
+	}
+
+	@Override
+	public List<T> getWhere(String where, List<Object> param) {
+		List<T> list = new ArrayList<>();
+		String sql = String.format("%s where %s", this.getSelectSql(), where);
+		
+		try(Connection conn = ConnectionManager.getConnection();
+				PreparedStatement stmt = conn.prepareStatement(sql)) {
+			// set parameter
+			for(int i=0; i < param.size(); ) {
+				Object obj = param.get(i);
+				stmt.setObject(++i, obj);
+			}
+			
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				list.add(mapper.apply(rs));
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 
