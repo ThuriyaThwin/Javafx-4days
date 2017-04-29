@@ -20,7 +20,7 @@ public class MenuItemService {
 			return model.getAll();
 		}
 
-		return model.getWhere("category_id", Arrays.asList(cat.getId()));
+		return model.getWhere("category_id = ?", Arrays.asList(cat.getId()));
 	}
 
 }

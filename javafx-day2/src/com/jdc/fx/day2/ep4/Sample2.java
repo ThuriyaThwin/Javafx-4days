@@ -10,7 +10,7 @@ public class Sample2 {
 		StringProperty var2 = new SimpleStringProperty("Java EE");
 		
 		var1.addListener(a -> {
-			System.out.println("Change Value : " + a);
+			System.out.println("Change Value : " + var1);
 		});
 		
 		var1.bind(var2);
